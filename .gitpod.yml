@@ -1,8 +1,9 @@
 tasks:
   - init: |
-      docker run -d -p 8787:8787 -v /workspace:/home/rstudio/workspace -e DISABLE_AUTH=true ghcr.io/lescai-teaching/rstudio-docker-amd64:latest
+      docker run -d -p 4000:3838 bigomics/omicsplayground:latest
+
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
-  - port: 8787
+  - port: 4000
     onOpen: open-browser
