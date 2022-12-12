@@ -1,9 +1,9 @@
 tasks:
   - init: |
-      docker run -d -p 4000:3838 bigomics/omicsplayground:latest
+      docker run -d -p 8787:8787 -e ROOT=TRUE -e PASSWORD=test12 -v $(pwd):/home/rstudio bioconductor/bioconductor_docker:latest
 
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
-  - port: 4000
+  - port: 8787
     onOpen: open-browser
